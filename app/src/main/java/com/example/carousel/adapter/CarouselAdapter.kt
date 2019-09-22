@@ -11,7 +11,7 @@ import com.example.carousel.room.ArtEntity
 import com.example.carousel.utils.loadPicture
 import com.example.carousel.utils.takeFirst
 
-class CarouselAdapter(val myList:MutableList<ArtEntity>) : BaseAdapter() {
+class CarouselAdapter(val myList:List<ArtEntity>) : BaseAdapter() {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View? {
         val view: View?

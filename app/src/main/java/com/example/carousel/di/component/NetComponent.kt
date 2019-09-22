@@ -2,6 +2,7 @@ package com.example.carousel.di.component
 
 import com.example.carousel.di.module.AppModule
 import com.example.carousel.di.module.NetModule
+import com.example.carousel.room.ArtDAO
 import dagger.Component
 import retrofit2.Retrofit
 import javax.inject.Singleton
@@ -12,4 +13,5 @@ import javax.inject.Singleton
 interface NetComponent {
 
     fun retrofit():Retrofit
+    fun artDao():ArtDAO
 }
