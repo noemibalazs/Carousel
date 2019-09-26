@@ -2,7 +2,6 @@ package com.example.carousel.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.animation.AnimationUtils
@@ -13,7 +12,6 @@ import com.example.carousel.adapter.CarouselAdapter
 import com.example.carousel.application.MyApp
 import com.example.carousel.room.ArtDAO
 import com.example.carousel.room.ArtEntity
-import com.example.carousel.utils.getEntity
 import com.example.carousel.utils.takeFirst
 import it.moondroid.coverflow.components.ui.containers.FeatureCoverFlow
 import kotlinx.android.synthetic.main.activity_main.*
