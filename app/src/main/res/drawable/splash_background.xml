@@ -8,7 +8,7 @@
         android:width="200dp"
         android:height="200dp">
         <bitmap
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:src="@drawable/icon"/>
     </item>
 
