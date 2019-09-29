@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     @JvmField
     var artDao: ArtDAO? = null
 
-    private var list: MutableList<ArtEntity> = mutableListOf()
+    private var newList: MutableList<ArtEntity> = mutableListOf()
     private lateinit var adapter: CarouselAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,20 +59,19 @@ class MainActivity : AppCompatActivity() {
 
     private fun getListFromDB() {
         artDao?.getArtList()!!.observe(this, Observer {
-           list.addAll(it)
+           newList.addAll(it)
         })
     }
 
     private fun getArtEntity(position: Int): ArtEntity{
         if (position != 0){
-            return list[position +1]
-        }else{
-            return list[position]
+            return adapter.myList[position -1]
         }
+        return adapter.myList[position]
     }
 
     private fun populateUI(){
-        adapter = CarouselAdapter(list)
+        adapter = CarouselAdapter(newList, this)
         coverflow.adapter = adapter
     }
 
@@ -84,7 +83,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onScrolledToPosition(position: Int) {
                 val entity = getArtEntity(position)
-                titleSwitcher.setText(entity.tag.takeFirst())
+               // titleSwitcher.setText(entity.tag)
             }
         })
     }

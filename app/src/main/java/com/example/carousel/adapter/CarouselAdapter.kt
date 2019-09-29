@@ -1,5 +1,6 @@
 package com.example.carousel.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,13 +12,13 @@ import com.example.carousel.room.ArtEntity
 import com.example.carousel.utils.loadPicture
 import com.example.carousel.utils.takeFirst
 
-class CarouselAdapter(val myList:List<ArtEntity>) : BaseAdapter() {
+class CarouselAdapter(val myList:List<ArtEntity>, val context: Context) : BaseAdapter() {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View? {
         val view: View?
         val vh: CarouselVH
         if (convertView == null){
-            view = LayoutInflater.from(parent?.context).inflate(R.layout.item_carousel, parent, false)
+            view = LayoutInflater.from(context).inflate(R.layout.item_carousel, parent, false)
             vh = CarouselVH(view)
             view.tag = vh
         }else{

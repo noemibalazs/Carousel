@@ -25,6 +25,7 @@
         tools:text="Tiger"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold"
+        android:textColor="@android:color/white"
         android:gravity="center"
         android:layout_width="0dp"
         android:layout_height="wrap_content"/>

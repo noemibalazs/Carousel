@@ -40,8 +40,7 @@ class SplashActivity : AppCompatActivity() {
             launch()
         }, 5000)
 
-        val x = getListSize()
-        Log.d("Splash", "the size is: $x")
+        Log.d("onCreate SplashActivity", "The size is: ${getListSize()}")
     }
 
     private fun insertAll(myList: ArtworkBlock) {
@@ -63,6 +62,7 @@ class SplashActivity : AppCompatActivity() {
                 if (response.body()!= null && response.isSuccessful){
                     val body = response.body()!!
                     insertAll(body)
+                    Log.d("onResponse", "is successfull")
                 }
 
                 if (!response.isSuccessful){
