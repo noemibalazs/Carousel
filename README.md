@@ -16,5 +16,7 @@ Libraries:
   5. Support design libraries
   6. Moondroid Coverflow
   
-Screenshots:
+Screenshot:
+
+![Screenshot_20190929-135833_Carousel](https://user-images.githubusercontent.com/33603567/65831494-d6653300-e2c2-11e9-923a-8cdacc2284d6.jpg)
 
